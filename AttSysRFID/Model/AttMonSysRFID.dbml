@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AttMonSysRFID" Class="AttMonSysRFIDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=USER-PC\VIRUS;Initial Catalog=AttMonSysRFID;Persist Security Info=True;User ID=sa" SettingsObjectName="AttSysRFID.Properties.Settings" SettingsPropertyName="AttSysBioConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.T_Application" Member="T_Applications">
+    <Type Name="T_Application">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Application" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_CivilStatus" Member="T_CivilStatus">
+    <Type Name="T_CivilStatus">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_SendingNotificationAuthorized" Member="T_SendingNotificationAuthorizeds">
+    <Type Name="T_SendingNotificationAuthorized">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StudentSMS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StudentRFID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StdContactNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StdRFID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherSMS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MotherRFID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MomContactNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MomRFID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherSMS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FatherRFID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DodContactNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DodRFID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_ParenstInfo" Member="T_ParenstInfos">
+    <Type Name="T_ParenstInfo">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MotherID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FatherID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MomLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MomFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MomMiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MomContactNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MomRFIDNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MomCivilStatus" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MomAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MRFIDNo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MContactNo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DadLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DadFistName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DadMiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DadContactNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DadRFIDNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DadCivilStatus" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DadAddress" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FRFIDNo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FContactNo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_SystemUser" Member="T_SystemUsers">
+    <Type Name="T_SystemUser">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EncryptedPassword" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PathImage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Bday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PositionID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Theme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RFIDStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RFIDNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_YearLevel" Member="T_YearLevels">
+    <Type Name="T_YearLevel">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YearLevel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Course" Member="T_Courses">
+    <Type Name="T_Course">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CourseCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="YearMinimum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearMaximum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YearLevelFromTo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Semester" Member="T_Semesters">
+    <Type Name="T_Semester">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Semester" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Subject" Member="T_Subjects">
+    <Type Name="T_Subject">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Day" Member="T_Days">
+    <Type Name="T_Day">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Day" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Time" Member="T_Times">
+    <Type Name="T_Time">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TimeStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TimeCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_RoomTime" Member="T_RoomTimes">
+    <Type Name="T_RoomTime">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TimeCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RoomCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_BranchBuilding" Member="T_BranchBuildings">
+    <Type Name="T_BranchBuilding">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BuildingCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BuildingName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Room" Member="T_Rooms">
+    <Type Name="T_Room">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoomCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="RoomType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="BuildingCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Type" Member="T_Types">
+    <Type Name="T_Type">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_DeviceSettingRFID" Member="T_DeviceSettingRFIDs">
+    <Type Name="T_DeviceSettingRFID">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeviceName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Port" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="BaundRate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataBit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Parity" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="StopBit" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_NotificationSetting" Member="T_NotificationSettings">
+    <Type Name="T_NotificationSetting">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Site" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Page" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IPaddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParamMessageName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParamMobileName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Messages" Member="T_Messages">
+    <Type Name="T_Message">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MessageAlert" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CoundSending" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_RoomDevie" Member="T_RoomDevies">
+    <Type Name="T_RoomDevie">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoomCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RoomType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DeviceCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SerialPort" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DeviceName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_ActiveSemester" Member="T_ActiveSemesters">
+    <Type Name="T_ActiveSemester">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YearSemester" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Semester" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_StudentInformation" Member="T_StudentInformations">
+    <Type Name="T_StudentInformation">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MotherID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FatherID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Application" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Bday" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CompletedStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GraduateStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnrolledStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RFIDStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ContactNoStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateRegistered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="YearLevel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProfilePicture" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="RFIDNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Remainders" Member="T_Remainders">
+    <Type Name="T_Remainder">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Remainders" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_SystemUserLogs" Member="T_SystemUserLogs">
+    <Type Name="T_SystemUserLog">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeOUT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_OnNotification" Member="T_OnNotifications">
+    <Type Name="T_OnNotification">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OnMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_ScanUserLogs" Member="T_ScanUserLogs">
+    <Type Name="T_ScanUserLog">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RoomCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubjectCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubjectDescription" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeOUT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MessageID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SendingNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SendingTo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TotalHours" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Day" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_InstructorInformation" Member="T_InstructorInformations">
+    <Type Name="T_InstructorInformation">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BDay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_AccessRight" Member="T_AccessRights">
+    <Type Name="T_AccessRight">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PositionID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JobTitle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Student" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Instructor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Position" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Users" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="YearLevel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CivilStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Application" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Course" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Subject" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Room" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Time" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Display" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Report" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeviceConfiguration" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RoomType" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Building" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViewRoom" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViewCourse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViewInstructor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaintenanceMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NotifyStudent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SMSSettings" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Semester" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="YearClass" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_CourseAndSubject" Member="T_CourseAndSubjects">
+    <Type Name="T_CourseAndSubject">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SubjectCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CourseCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CourseDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_RegisteredStudentSemester" Member="T_RegisteredStudentSemesters">
+    <Type Name="T_RegisteredStudentSemester">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoomCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentsNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MessageID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TImeEnd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Day" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Semester" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SemStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SemEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="YearClass" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RFID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AlreadyIN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

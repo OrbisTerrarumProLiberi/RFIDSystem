@@ -1,0 +1,76 @@
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\bin\Debug\AttSysRFID.exe.config
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\bin\Debug\AttSysRFID.exe
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\bin\Debug\AttSysRFID.pdb
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Properties.Resources.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Attendance.frmAttendanceLogs.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Device.frmDeviceConfig.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Display.frmDisplayGate.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.frmInstructorRegistration.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmApplication.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmBuilding.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmCivilStatus.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmCourse.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmPositionAccessRight.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmRoom.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmSemester.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmSubject.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmTime.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmTypeofRoom.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmUserRegistration.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmYearClass.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmYearLevel.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Main.frmMain.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Notification.frmAPISite.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Notification.frmApplySMSForStudent.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Notification.frmSMSSettings.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Report.frmReportViewer.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Student.frmStudent.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.ViewRecord.frmCourseAndSubject.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.ViewRecord.frmRoomRecord.resources
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.exe
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.pdb
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\Interop.CrystalAnalysisCommLayerLib.dll
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\Interop.CrystalAnalysisCommonControlsLib.dll
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\Interop.CrystalReportsCommonObjectModelLib.dll
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\Interop.CrystalReportsTemplateEngineLib.dll
+C:\Users\user\Desktop\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\bin\Debug\AttSysRFID.exe.config
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\Interop.CrystalAnalysisCommLayerLib.dll
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\Interop.CrystalAnalysisCommonControlsLib.dll
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\Interop.CrystalReportsCommonObjectModelLib.dll
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\Interop.CrystalReportsTemplateEngineLib.dll
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.exe
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.pdb
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\bin\Debug\AttSysRFID.exe
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\bin\Debug\AttSysRFID.pdb
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Properties.Resources.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Attendance.frmAttendanceLogs.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Device.frmDeviceConfig.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Display.frmDisplayGate.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.frmInstructorRegistration.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmApplication.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmBuilding.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmCivilStatus.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmCourse.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmPositionAccessRight.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmRoom.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmSemester.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmSubject.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmTime.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmTypeofRoom.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmUserRegistration.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmYearClass.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Maintenanceform.frmYearLevel.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Main.frmMain.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Notification.frmAPISite.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Notification.frmApplySMSForStudent.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Notification.frmSMSSettings.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Report.frmReportViewer.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.Student.frmStudent.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.ViewRecord.frmCourseAndSubject.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.Views.ViewRecord.frmRoomRecord.resources
+C:\Users\user\Desktop\ALl Files\AttSysRFID\AttSysRFID\obj\x86\Debug\AttSysRFID.csproj.GenerateResource.Cache

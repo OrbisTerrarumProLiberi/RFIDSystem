@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.5" name="AttMonSysRFID">
+  <DataContextMoniker Name="/AttMonSysRFIDDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2719d70a-5efa-4f42-b89a-3f3c4cd59445" isExpanded="false" absoluteBounds="0.75, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ff32339-a500-4b50-9acc-556189ca89a0" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4052ed07-8bf2-4fcd-a8d3-d2acd36524ac" isExpanded="false" absoluteBounds="0.75, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_CivilStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10ea37ed-42c6-45d8-954e-eab0fc2f6341" absoluteBounds="0.76500000000000012, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37c5dac8-077e-45b6-8a89-7d6fe438a5d1" isExpanded="false" absoluteBounds="3.625, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_SendingNotificationAuthorized" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5150edc9-4643-407e-b161-bcb9ea2eee12" absoluteBounds="3.64, 1.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7823f733-a51b-4aab-8915-fa77161314ea" isExpanded="false" absoluteBounds="3.625, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_ParenstInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="035ad427-cb9d-48bc-a9c2-b23ec6084938" absoluteBounds="3.64, 1.71, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="292fea15-1974-428d-b1e7-02088d87ed7d" isExpanded="false" absoluteBounds="6, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_SystemUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3adb106-1488-4640-9512-3afadfa05310" absoluteBounds="6.015, 1.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c12486ef-778f-46df-b026-25329fb6e68e" isExpanded="false" absoluteBounds="0.75, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_YearLevel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc2e57c1-e994-4d5b-bb65-0e905c902300" absoluteBounds="0.76499999999999968, 2.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37223a8a-aef0-4bb1-b1e1-3b408430883f" isExpanded="false" absoluteBounds="0.75, 4.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Course" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec3f5ff9-480e-4f7d-b007-d49f58ff3bbb" absoluteBounds="0.76499999999999968, 5.2100000000000009, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af15b0eb-5c13-418b-bddb-d158844eab6e" isExpanded="false" absoluteBounds="0.75, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Semester" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f1e32f3-347e-4b9d-9055-da62f4da5db3" absoluteBounds="0.76500000000000057, 3.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54a66c61-cf7b-478b-8cd5-29f94a880316" isExpanded="false" absoluteBounds="0.75, 2.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Subject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e112c50-89cf-4ecc-bf00-eff89379e192" absoluteBounds="0.76500000000000057, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c077a90b-6c9a-4ad1-b969-f9c79dd77007" isExpanded="false" absoluteBounds="0.75, 4.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Day" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a3c359c-9578-4f76-bc25-b7c44214804c" absoluteBounds="0.76500000000000057, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4bd4785-e942-4e70-8cdb-f8ca65e74469" isExpanded="false" absoluteBounds="0.75, 5.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Time" />
+      <nestedChildShapes>
+        <elementListCompartment Id="036da076-e5b5-4ce7-8894-15db9de70fc6" absoluteBounds="0.76500000000000057, 6.2100000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="714f8419-39d2-46fd-aecb-e36a33dc7fb3" isExpanded="false" absoluteBounds="0.75, 6.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_RoomTime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8067431-45de-49fe-affc-4210151e8b95" absoluteBounds="0.765, 7.2100000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6cb2b807-d22b-4874-9f69-5e2969f68cb4" isExpanded="false" absoluteBounds="0.75, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_BranchBuilding" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ba51647-d63d-4323-a735-d9395bde5f87" absoluteBounds="0.76500000000000057, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3c414d4-3461-4590-89a4-69585d8046a0" isExpanded="false" absoluteBounds="0.75, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Room" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f0e653a-70c2-4535-a666-a65775dc29b3" absoluteBounds="0.76500000000000057, 3.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66629dd8-fcb7-4743-822c-e0561674282a" isExpanded="false" absoluteBounds="0.75, 7.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Type" />
+      <nestedChildShapes>
+        <elementListCompartment Id="125883dc-a439-44a1-a6ae-8085675f2e31" absoluteBounds="0.76500000000000012, 7.7100000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="05b76241-3eb6-42cc-bc9e-d1959e29d8ab" isExpanded="false" absoluteBounds="0.75, 6.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_DeviceSettingRFID" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fb77da8-5db0-45a9-96d6-69a5f29e43f5" absoluteBounds="0.76499999999999968, 6.7100000000000009, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c7ada12-aea2-4ce2-b228-eb4084ab271c" isExpanded="false" absoluteBounds="3.625, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_NotificationSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="183d7bf5-c885-468f-97d5-f9f40b50f460" absoluteBounds="3.6400000000000006, 2.2100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="46f2903c-2f45-4269-bbfe-8900be084145" isExpanded="false" absoluteBounds="0.75, 7.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Message" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a75f790-2c14-4786-8a5d-03e05a29b5a2" absoluteBounds="0.76500000000000057, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="77c27987-b72e-40e2-b276-a2bad9ba87fc" isExpanded="false" absoluteBounds="0.75, 8.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_RoomDevie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62d34f26-b372-47c8-8e3b-909cd021318b" absoluteBounds="0.76500000000000057, 8.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca2f7168-3dee-4899-b7d1-f0d2711904da" isExpanded="false" absoluteBounds="0.75, 9.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_ActiveSemester" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7079e582-59b5-42d2-b88a-283cf31ea6e4" absoluteBounds="0.76500000000000057, 9.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3019b3f-594a-4f65-88d7-223704e8c81e" isExpanded="false" absoluteBounds="8.75, 1.625, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_StudentInformation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b89d12ac-bf88-45c8-ae40-50721a182350" absoluteBounds="8.765, 2.0850000000000009, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c69651e-4a14-4470-bdbb-28f553a2a620" isExpanded="false" absoluteBounds="0.75, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_Remainder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82a2c631-8663-45fe-b317-1fbe347233e0" absoluteBounds="0.76500000000000057, 5.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d560379b-7092-4835-92b5-c27ed52c800a" isExpanded="false" absoluteBounds="8.75, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_SystemUserLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8113ae7c-df4f-4199-9fd9-1707bfe08293" absoluteBounds="8.765, 1.2100000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d9db86e-f5cf-4c96-9780-510836b486ab" isExpanded="false" absoluteBounds="0.75, 8.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_OnNotification" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca10bb6b-baff-4348-884a-a8fbf30d8672" absoluteBounds="0.76500000000000057, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db6cfb3b-7080-45fb-9abc-35ffc27f43a4" isExpanded="false" absoluteBounds="0.75, 9.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_ScanUserLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a403da7-b8d5-4196-af36-a7ee1fdcafa6" absoluteBounds="0.76500000000000057, 10.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb4cd5f0-876f-45d3-8055-b398650a17a9" isExpanded="false" absoluteBounds="8.75, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_InstructorInformation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e9b7631-c17a-4b05-b7ce-efd430849f61" absoluteBounds="8.765, 2.5850000000000009, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6a09b10-2a71-466f-b1d4-04fbd47de55a" isExpanded="false" absoluteBounds="0.75, 10.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_AccessRight" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10b0a439-3523-493c-82c7-0a41db22e80f" absoluteBounds="0.76500000000000057, 10.71, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9feded83-29a2-400e-801f-76bac9613029" isExpanded="false" absoluteBounds="0.75, 10.75, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_CourseAndSubject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a9abcef-164e-4a1b-a6b4-8724f2dcf8d1" absoluteBounds="0.76500000000000057, 11.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d6842c27-d9d6-41a4-a19a-77f2e6a4f347" isExpanded="false" absoluteBounds="6, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/AttMonSysRFIDDataContext/T_RegisteredStudentSemester" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0bccc79-3a6d-4bd2-be75-144c34af76ac" absoluteBounds="6.015, 1.71, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

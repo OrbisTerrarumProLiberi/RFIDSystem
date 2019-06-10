@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FFE750F-4310-4919-B428-461A5A762AE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AttSysRFID</RootNamespace>
+    <AssemblyName>AttSysRFID</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AttMonSysRFID.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttMonSysRFID.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\DeviceModule.cs" />
+    <Compile Include="ViewModel\DGVPrinter.cs" />
+    <Compile Include="ViewModel\GetAPI.cs" />
+    <Compile Include="ViewModel\Instructor.cs" />
+    <Compile Include="ViewModel\Maintenance.cs" />
+    <Compile Include="ViewModel\SMSNotification.cs" />
+    <Compile Include="ViewModel\Students.cs" />
+    <Compile Include="ViewModel\SystemConnection.cs" />
+    <Compile Include="ViewModel\SystemProperties.cs" />
+    <Compile Include="ViewModel\UserDetail.cs" />
+    <Compile Include="Views\Attendance\frmAttendanceLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Attendance\frmAttendanceLogs.Designer.cs">
+      <DependentUpon>frmAttendanceLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\frmDeviceConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Device\frmDeviceConfig.Designer.cs">
+      <DependentUpon>frmDeviceConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Display\frmDisplayGate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Display\frmDisplayGate.Designer.cs">
+      <DependentUpon>frmDisplayGate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmInstructorRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmInstructorRegistration.Designer.cs">
+      <DependentUpon>frmInstructorRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmApplication.Designer.cs">
+      <DependentUpon>frmApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmBuilding.Designer.cs">
+      <DependentUpon>frmBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmCivilStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmCivilStatus.Designer.cs">
+      <DependentUpon>frmCivilStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmCourse.Designer.cs">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmPositionAccessRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmPositionAccessRight.Designer.cs">
+      <DependentUpon>frmPositionAccessRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmRoom.Designer.cs">
+      <DependentUpon>frmRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmSemester.Designer.cs">
+      <DependentUpon>frmSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmSubject.Designer.cs">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmTime.Designer.cs">
+      <DependentUpon>frmTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmTypeofRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmTypeofRoom.Designer.cs">
+      <DependentUpon>frmTypeofRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmUserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmUserRegistration.Designer.cs">
+      <DependentUpon>frmUserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmYearClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmYearClass.Designer.cs">
+      <DependentUpon>frmYearClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmYearLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenanceform\frmYearLevel.Designer.cs">
+      <DependentUpon>frmYearLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notification\frmAPISite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Notification\frmAPISite.Designer.cs">
+      <DependentUpon>frmAPISite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notification\frmApplySMSForStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Notification\frmApplySMSForStudent.Designer.cs">
+      <DependentUpon>frmApplySMSForStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notification\frmSMSSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Notification\frmSMSSettings.Designer.cs">
+      <DependentUpon>frmSMSSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Report\frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Report\frmReportViewer.Designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student\frmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Student\frmStudent.Designer.cs">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewRecord\frmCourseAndSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewRecord\frmCourseAndSubject.Designer.cs">
+      <DependentUpon>frmCourseAndSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewRecord\frmRoomRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewRecord\frmRoomRecord.Designer.cs">
+      <DependentUpon>frmRoomRecord.cs</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Model\AttMonSysRFID.dbml.layout">
+      <DependentUpon>AttMonSysRFID.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="obj\x86\Debug\AttSysRFID.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Attendance\frmAttendanceLogs.resx">
+      <DependentUpon>frmAttendanceLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Device\frmDeviceConfig.resx">
+      <DependentUpon>frmDeviceConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Display\frmDisplayGate.resx">
+      <DependentUpon>frmDisplayGate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmInstructorRegistration.resx">
+      <DependentUpon>frmInstructorRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmApplication.resx">
+      <DependentUpon>frmApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmBuilding.resx">
+      <DependentUpon>frmBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmCivilStatus.resx">
+      <DependentUpon>frmCivilStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmCourse.resx">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmPositionAccessRight.resx">
+      <DependentUpon>frmPositionAccessRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmRoom.resx">
+      <DependentUpon>frmRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmSemester.resx">
+      <DependentUpon>frmSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmSubject.resx">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmTime.resx">
+      <DependentUpon>frmTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmTypeofRoom.resx">
+      <DependentUpon>frmTypeofRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmUserRegistration.resx">
+      <DependentUpon>frmUserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmYearClass.resx">
+      <DependentUpon>frmYearClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenanceform\frmYearLevel.resx">
+      <DependentUpon>frmYearLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Notification\frmAPISite.resx">
+      <DependentUpon>frmAPISite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Notification\frmApplySMSForStudent.resx">
+      <DependentUpon>frmApplySMSForStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Notification\frmSMSSettings.resx">
+      <DependentUpon>frmSMSSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Report\frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student\frmStudent.resx">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewRecord\frmCourseAndSubject.resx">
+      <DependentUpon>frmCourseAndSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewRecord\frmRoomRecord.resx">
+      <DependentUpon>frmRoomRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\AttSysRFID.vshost.exe.manifest" />
+    <None Include="bin\Debug\ButtonImage\Wifi.psd" />
+    <None Include="bin\Debug\Img\Trash\Button.psd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Model\AttMonSysRFID.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AttMonSysRFID.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="obj\x86\Debug\AttSysRFID.csproj.GenerateResource.Cache" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AttSysRFID.exe" />
+    <Content Include="bin\Debug\AttSysRFID.pdb" />
+    <Content Include="bin\Debug\AttSysRFID.vshost.exe" />
+    <Content Include="bin\Debug\Background.jpg" />
+    <Content Include="bin\Debug\Background.txt" />
+    <Content Include="bin\Debug\ButtonImage\Add.png" />
+    <Content Include="bin\Debug\ButtonImage\Cancel.png" />
+    <Content Include="bin\Debug\ButtonImage\Delete.png" />
+    <Content Include="bin\Debug\ButtonImage\Edit.png" />
+    <Content Include="bin\Debug\ButtonImage\Save.png" />
+    <Content Include="bin\Debug\ButtonImage\Search.png" />
+    <Content Include="bin\Debug\ButtonImage\Submit.png" />
+    <Content Include="bin\Debug\ButtonImage\WifiInternetAccess.png" />
+    <Content Include="bin\Debug\ButtonImage\WifiNoInternetAccess.png" />
+    <Content Include="bin\Debug\ButtonImage\_add.png" />
+    <Content Include="bin\Debug\ButtonImage\_cancel.png" />
+    <Content Include="bin\Debug\ButtonImage\_delete.png" />
+    <Content Include="bin\Debug\ButtonImage\_edit.png" />
+    <Content Include="bin\Debug\ButtonImage\_save.png" />
+    <Content Include="bin\Debug\Img\Add2.png" />
+    <Content Include="bin\Debug\Img\cancel1.png" />
+    <Content Include="bin\Debug\Img\Delete2.png" />
+    <Content Include="bin\Debug\Img\Edit2.png" />
+    <Content Include="bin\Debug\Img\Save3.png" />
+    <Content Include="bin\Debug\Img\Submit - Copy.png" />
+    <Content Include="bin\Debug\Img\Trash\Add.png" />
+    <Content Include="bin\Debug\Img\Trash\Add1.png" />
+    <Content Include="bin\Debug\Img\Trash\cancel.png" />
+    <Content Include="bin\Debug\Img\Trash\Delete.png" />
+    <Content Include="bin\Debug\Img\Trash\Delete1.png" />
+    <Content Include="bin\Debug\Img\Trash\Edit.png" />
+    <Content Include="bin\Debug\Img\Trash\Edit1.png" />
+    <Content Include="bin\Debug\Img\Trash\save.png" />
+    <Content Include="bin\Debug\Img\Trash\save1.png" />
+    <Content Include="bin\Debug\Img\Trash\save2.png" />
+    <Content Include="bin\Debug\Img\Trash\trash.png" />
+    <Content Include="bin\Debug\Img\_add.png" />
+    <Content Include="bin\Debug\Img\_cancel.png" />
+    <Content Include="bin\Debug\Img\_delete.png" />
+    <Content Include="bin\Debug\Img\_edit.png" />
+    <Content Include="bin\Debug\Img\_save.png" />
+    <Content Include="bin\Debug\InstructorImage\asdasdasdasd-sda.png" />
+    <Content Include="bin\Debug\InstructorImage\asdasddasdasdsad-asdasdasdasd.png" />
+    <Content Include="bin\Debug\InstructorImage\BuenaobraMichael-Ins01.png" />
+    <Content Include="bin\Debug\InstructorImage\BuenaobrassMichael-Ins01.png" />
+    <Content Include="bin\Debug\InstructorImage\TestTest-Test.png" />
+    <Content Include="bin\Debug\InstructorImage\TesttTest-Tetst.png" />
+    <Content Include="bin\Debug\StudentImage\ManzoFlorencio-13-A0024.png" />
+    <Content Include="bin\Debug\StudentImage\TestingTesting-Testing.png" />
+    <Content Include="bin\Debug\StudentImage\TestTest-TEst.png" />
+    <Content Include="obj\x86\Debug\AttSysRFID.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\x86\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CrystalAnalysisCommLayerLib">
+      <Guid>{185CB96C-DCFF-4826-8D4A-1FB065F47463}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalAnalysisCommonControlsLib">
+      <Guid>{E14D52A8-B234-4F86-89A5-8CA2A32074BD}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsCommonObjectModelLib">
+      <Guid>{C0DA8786-AAA8-4F00-BB60-91C52FC3325F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsTemplateEngineLib">
+      <Guid>{33F68D56-A79C-4DDF-8198-79381FF3E332}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
