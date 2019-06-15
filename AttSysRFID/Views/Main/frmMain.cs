@@ -39,7 +39,7 @@ namespace AttSysRFID.Views.Main
             tsPosition.Text = "";
             timer1.Enabled = true;
             timer1.Start();
-            this.BackgroundImage = Image.FromFile(SystemProperties.SystemBackground());
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Background.jpg");
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
         void Sethandler()
@@ -416,12 +416,9 @@ namespace AttSysRFID.Views.Main
         void timer1_Tick(object sender, EventArgs e)
         {
             tsDateTime.Text = UserDetail.CurrDate().ToString("MMM. dd, yyyy |  HH:mm:ss tt");
-            string Internet = "";
-            string NoInternet = "";
-         
-            Internet = string.Format(@"{0}\WifiInternetAccess.png", SystemSetup.ImagePath).Replace("\\", @"\");
-            NoInternet = string.Format(@"{0}\WifiNoInternetAccess.png", SystemSetup.ImagePath).Replace("\\", @"\");
-            
+            string Internet = string.Format(@"{0}\WifiInternetAccess.png", SystemSetup.ImagePath).Replace("\\", @"\");
+            string NoInternet = string.Format(@"{0}\WifiNoInternetAccess.png", SystemSetup.ImagePath).Replace("\\", @"\");
+                        
             using (GetAPI getapi = new GetAPI())
             {
                 wifiPic.Image = getapi.CheckInternetConnection() ? Image.FromFile(Internet) : Image.FromFile(NoInternet);//"Internet access":"No internet access";

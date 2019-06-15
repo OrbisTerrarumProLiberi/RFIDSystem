@@ -120,7 +120,7 @@ namespace AttSysRFID.Model
     #endregion
 		
 		public AttMonSysRFIDDataContext() : 
-				base(global::AttSysRFID.Properties.Settings.Default.AttSysBioConnectionString, mappingSource)
+				base(global::AttSysRFID.Properties.Settings.Default.AttMonSysRFIDConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

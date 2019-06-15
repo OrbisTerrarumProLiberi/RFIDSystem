@@ -153,7 +153,7 @@
             // 
             this._User.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._User.Name = "_User";
-            this._User.Size = new System.Drawing.Size(54, 15);
+            this._User.Size = new System.Drawing.Size(55, 15);
             this._User.Text = "User:    ";
             // 
             // tsUser
@@ -539,7 +539,7 @@
             this.pnlLogin.Controls.Add(this.txtUsername);
             this.pnlLogin.Controls.Add(this.label2);
             this.pnlLogin.Controls.Add(this.label1);
-            this.pnlLogin.Location = new System.Drawing.Point(481, 102);
+            this.pnlLogin.Location = new System.Drawing.Point(471, 158);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(359, 244);
             this.pnlLogin.TabIndex = 6;

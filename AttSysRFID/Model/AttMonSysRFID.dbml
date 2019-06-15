@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AttMonSysRFID" Class="AttMonSysRFIDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=USER-PC\VIRUS;Initial Catalog=AttMonSysRFID;Persist Security Info=True;User ID=sa" SettingsObjectName="AttSysRFID.Properties.Settings" SettingsPropertyName="AttSysBioConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DEVTP10-01\SQLEXPRESS;Initial Catalog=AttMonSysRFID;Persist Security Info=True;User ID=sa" SettingsObjectName="AttSysRFID.Properties.Settings" SettingsPropertyName="AttMonSysRFIDConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.T_Application" Member="T_Applications">
     <Type Name="T_Application">
       <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
