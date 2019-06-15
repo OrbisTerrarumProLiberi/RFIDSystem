@@ -13,7 +13,7 @@ namespace AttSysRFID
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();  
         }
     }
 }
