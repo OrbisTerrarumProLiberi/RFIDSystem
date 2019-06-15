@@ -10,9 +10,9 @@ namespace AttSysRFID.ViewModel
 {
     public class SystemProperties:IDisposable
     {
-        SerialPort ComSerial = new SerialPort();
-        TextBox txt = new TextBox();
-        public string Disp;
+        //SerialPort ComSerial = new SerialPort();
+        //TextBox txt = new TextBox();
+        //public string Disp;
         public static Button BtnProperties(Button btn,bool enable,string EnableImageName,string DisableImage)
         {
             //Button btn = new Button();
@@ -130,18 +130,18 @@ namespace AttSysRFID.ViewModel
         }
         public static string ReadButtonImage()
         {
-            string StrStarImgPath = Application.StartupPath + @"\ButtonImage";
-            return StrStarImgPath;
+            //string StrStarImgPath = Application.StartupPath + @"\ButtonImage";
+            return Application.StartupPath + @"\ButtonImage";
         }
         public static string ReadStudentImage()
         {
-            string StrStarImgPath = Application.StartupPath + @"\StudentImage\";
-            return StrStarImgPath;
+            //string StrStarImgPath = Application.StartupPath + @"\StudentImage\";
+            return Application.StartupPath + @"\StudentImage\";
         }
         public static string ReadInstructorImage()
         {
-            string StrStarImgPath = Application.StartupPath + @"\InstructorImage\";
-            return StrStarImgPath;
+            //string StrStarImgPath = Application.StartupPath + @"\InstructorImage\";
+            return Application.StartupPath + @"\InstructorImage\";
         }
         public class MessageNotification
         {

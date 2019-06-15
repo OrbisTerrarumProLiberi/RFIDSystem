@@ -18,32 +18,40 @@ namespace AttSysRFID.ViewModel
                 return dc.ExecuteQuery<DateTime>("SELECT GETDATE()").FirstOrDefault();
             }
         }
+
         public static void ONNotification()
         {
             using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
             {
-                var ONNotify=dc.T_OnNotifications.FirstOrDefault().OnMessage.Value;
-                OnMessage.SendingNotification = ONNotify;
+                OnMessage.SendingNotification = dc.T_OnNotifications.FirstOrDefault().OnMessage.Value;
             }
         }
+
         public void SaveLog(bool TimeIN)
         {
-            T_SystemUserLog value = new T_SystemUserLog();
-            T_SystemUserLog valueupdate = new T_SystemUserLog();
+            //T_SystemUserLog value = new T_SystemUserLog();
+            //T_SystemUserLog valueupdate = new T_SystemUserLog();
             using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
             {
                 if (TimeIN)
                 {
-                    value.UserID = UserInfo.UserID;
-                    value.UserPassword = UserInfo.Password;
-                    value.TimeIN = UserInfo.TimeIn;
-                    dc.T_SystemUserLogs.InsertOnSubmit(value);
+                    //value.UserID = UserInfo.UserID;
+                    //value.UserPassword = UserInfo.Password;
+                    //value.TimeIN = UserInfo.TimeIn;
+                    //dc.T_SystemUserLogs.InsertOnSubmit(value);
+                    dc.T_SystemUserLogs.InsertOnSubmit(new T_SystemUserLog()
+                    {
+                        UserID = UserInfo.UserID,
+                        UserPassword = UserInfo.Password,
+                        TimeIN = UserInfo.TimeIn
+                    });
                 }
                 else
                 {
                     if (!string.IsNullOrWhiteSpace(UserInfo.UserID))
                     {
-                        valueupdate = dc.T_SystemUserLogs.Where(x => x.TimeIN == UserInfo.TimeIn && x.UserID == UserInfo.UserID).FirstOrDefault();
+                        //valueupdate = dc.T_SystemUserLogs.Where(x => x.TimeIN == UserInfo.TimeIn && x.UserID == UserInfo.UserID).FirstOrDefault();
+                        var valueupdate = dc.T_SystemUserLogs.FirstOrDefault(x => x.TimeIN == UserInfo.TimeIn && x.UserID == UserInfo.UserID);
                         if (valueupdate != null)
                             valueupdate.TimeOUT = CurrDate();
                     }
@@ -51,15 +59,16 @@ namespace AttSysRFID.ViewModel
                 dc.SubmitChanges();
             }
         }
+
         public bool Login(T_SystemUser Users,ref string msg)
         {
-            T_SystemUser _users = new T_SystemUser();
+            //T_SystemUser _users = new T_SystemUser();
             using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
             {
-                _users = dc.T_SystemUsers.Where(x => x.Active == true && x.EncryptedPassword == Users.EncryptedPassword && x.Username == Users.Username && x.Active==true).FirstOrDefault();
+                //_users = dc.T_SystemUsers.Where(x => x.Active == true && x.EncryptedPassword == Users.EncryptedPassword && x.Username == Users.Username && x.Active==true).FirstOrDefault();
+                var _users = dc.T_SystemUsers.FirstOrDefault(x => x.Active.Value && x.EncryptedPassword == Users.EncryptedPassword && x.Username == Users.Username);
                 if (_users != null)
                 {
-                    
                     UserInfo.UserID = _users.UserID;
                     UserInfo.UserName = _users.Username;
                     UserInfo.Password = _users.Password;
@@ -70,8 +79,9 @@ namespace AttSysRFID.ViewModel
                     UserInfo.LastName = _users.LastName;
                     UserInfo.CompleteName = string.Format("{0}, {1}",_users.LastName,_users.FirstName);
                     UserInfo.DisplayName = _users.DisplayName;
-                    UserInfo.TimeIn =CurrDate();
-                    var accessRight = GetAccessRight().Where(x => x.Active == true && x.PositionID == _users.PositionID).FirstOrDefault();
+                    UserInfo.TimeIn = CurrDate();
+                    //var accessRight = GetAccessRight().Where(x => x.Active == true && x.PositionID == _users.PositionID).FirstOrDefault();
+                    var accessRight = GetAccessRight().FirstOrDefault(x => x.Active.Value && x.PositionID == _users.PositionID);
                     SystemSetup.SystemName = "Attendance Monitoring System with RFID and Message Notification";
                     UserInfo.JobTitle = accessRight.JobTitle;
                     SystemProperties.AccessRight.Application = accessRight.Application.Value;
@@ -109,6 +119,7 @@ namespace AttSysRFID.ViewModel
                 }
             }
         }
+
         public List<T_AccessRight> GetAccessRight()
         {
             using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
@@ -116,6 +127,7 @@ namespace AttSysRFID.ViewModel
                 return dc.T_AccessRights.ToList();
             }
         }
+
         public static string encrypt(string value)
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
@@ -125,6 +137,7 @@ namespace AttSysRFID.ViewModel
                 return Convert.ToBase64String(data).Replace("==","");
             }
         }
+
         public void Dispose()
         {
             

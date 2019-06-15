@@ -27,5 +27,17 @@ namespace AttSysRFID.ViewModel
                 SystemProperties.Password = ListConnSetting(_read, "[PASSWORD]");
             }
         }
-    }
+
+        public static string ConnectionString
+        {
+            get
+            {
+                return string.Format("Data Source={0};Initial Catalog={1};Persist Security Info=True;User ID={2};Password = {3}",
+                    SystemProperties.Server,
+                    SystemProperties.Database,
+                    SystemProperties.UserID,
+                    SystemProperties.Password);
+            }
+        }
+    } 
 }

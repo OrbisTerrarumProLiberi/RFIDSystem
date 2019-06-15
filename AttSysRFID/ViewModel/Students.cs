@@ -6,7 +6,7 @@ using AttSysRFID.Model;
 using AttSysRFID.ViewModel;
 namespace AttSysRFID.ViewModel
 {
-    public class Students:IDisposable
+    public class Students : IDisposable
     {
         public List<T_StudentInformation> GetStudentInfo()
         {
@@ -90,7 +90,8 @@ namespace AttSysRFID.ViewModel
             
         }
     }
-    public class Parents:IDisposable
+
+    public class Parents : IDisposable
     {
         public List<T_ParenstInfo> GetParentsInfo()
         {
