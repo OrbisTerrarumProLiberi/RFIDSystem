@@ -18,7 +18,7 @@ namespace AttSysRFID.ViewModel
         
         public static void GetStringConnection()
         {
-            var _read = File.ReadAllLines(Application.StartupPath+"\\Sys.txt");
+            var _read = File.ReadAllLines(Application.StartupPath+"\\Sys.ini");
             foreach(var reds in _read)
             {
                 SystemProperties.Database = ListConnSetting(_read,"[DATABASE]");

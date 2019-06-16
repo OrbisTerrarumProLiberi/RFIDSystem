@@ -17,6 +17,8 @@ using AttSysRFID.Views.Display;
 using AttSysRFID.Views.Notification;
 using AttSysRFID.Views.ViewRecord;
 using AttSysRFID.Views.Attendance;
+using System.Threading.Tasks;
+
 namespace AttSysRFID.Views.Main
 {
     public partial class frmMain : Form
@@ -413,18 +415,28 @@ namespace AttSysRFID.Views.Main
 
             
         }
-        void timer1_Tick(object sender, EventArgs e)
+        async void timer1_Tick(object sender, EventArgs e)
         {
             tsDateTime.Text = UserDetail.CurrDate().ToString("MMM. dd, yyyy |  HH:mm:ss tt");
-            string Internet = string.Format(@"{0}\WifiInternetAccess.png", SystemSetup.ImagePath).Replace("\\", @"\");
-            string NoInternet = string.Format(@"{0}\WifiNoInternetAccess.png", SystemSetup.ImagePath).Replace("\\", @"\");
-                        
-            using (GetAPI getapi = new GetAPI())
+            await Task.Run(() =>
             {
-                wifiPic.Image = getapi.CheckInternetConnection() ? Image.FromFile(Internet) : Image.FromFile(NoInternet);//"Internet access":"No internet access";
-                lblInternetStatus.Text = getapi.CheckInternetConnection() ? "Internet access" : "No internet access";
-                lblInternetStatus.ForeColor = getapi.CheckInternetConnection() ? Color.ForestGreen : Color.Red;
-            }
+                string Internet = string.Format(@"{0}\WifiInternetAccess.png", SystemSetup.ImagePath).Replace("\\", @"\");
+                string NoInternet = string.Format(@"{0}\WifiNoInternetAccess.png", SystemSetup.ImagePath).Replace("\\", @"\");
+
+                using (GetAPI getapi = new GetAPI())
+                {
+                    if (this.InvokeRequired)
+                    {
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            wifiPic.Image = getapi.CheckInternetConnection() ? Image.FromFile(Internet) : Image.FromFile(NoInternet);//"Internet access":"No internet access";
+                            lblInternetStatus.Text = getapi.CheckInternetConnection() ? "Internet access" : "No internet access";
+                            lblInternetStatus.ForeColor = getapi.CheckInternetConnection() ? Color.ForestGreen : Color.Red;
+                        });
+                    }
+                  
+                }
+            });
         }
             
     }

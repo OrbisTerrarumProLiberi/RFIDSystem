@@ -24,6 +24,7 @@ namespace AttSysRFID.Views.Student
         private long ParentsID;
         private string StudentFileImage;
         private string Comport;
+
         public frmStudent()
         {
             InitializeComponent();
@@ -576,7 +577,7 @@ namespace AttSysRFID.Views.Student
         {
             using (Students std = new Students())
             {
-                return std.GetStudentInfo().Where(x=> x.RFIDNo==txtStudentRFIDNo.Text).FirstOrDefault()==null?true:false;
+                return std.GetStudentInfo().Where(x=> x.RFIDNo == txtStudentRFIDNo.Text).FirstOrDefault()==null?true:false;
             }
         }
         void btnDelete_Click(object sender, EventArgs e)

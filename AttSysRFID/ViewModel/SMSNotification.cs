@@ -10,7 +10,7 @@ namespace AttSysRFID.ViewModel
     {
         public List<T_ScanUserLog> GetUserTime()
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_ScanUserLogs.ToList();
             }
@@ -18,7 +18,7 @@ namespace AttSysRFID.ViewModel
         public void Save(T_ScanUserLog value,bool TimeIN)
         {
             T_ScanUserLog valueupdate = new T_ScanUserLog();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 
                 T_RegisteredStudentSemester values = new T_RegisteredStudentSemester();
@@ -49,7 +49,7 @@ namespace AttSysRFID.ViewModel
         }
         public List<T_Message> GetSMS()
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_Messages.ToList();
             }
@@ -57,7 +57,7 @@ namespace AttSysRFID.ViewModel
         public void Delete(T_Message value,ref string msg)
         {
             T_Message valuedelete = new T_Message();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 valuedelete = dc.T_Messages.Where(x => x.ID == value.ID).FirstOrDefault();
                 dc.T_Messages.DeleteOnSubmit(valuedelete);
@@ -67,7 +67,7 @@ namespace AttSysRFID.ViewModel
         }
         public bool CheckSMSCode(string Code)
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_Messages.Where(x => x.Code == Code).FirstOrDefault() == null ? true : false;
             }
@@ -75,7 +75,7 @@ namespace AttSysRFID.ViewModel
         public void Save(T_Message value, ref string msg)
         {
             T_Message valueupdate = new T_Message();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 if (Compare(value))
                 {
@@ -104,21 +104,21 @@ namespace AttSysRFID.ViewModel
         }
         public bool Compare(T_Message value)
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_Messages.Where(x => x.Active == value.Active && x.Code == value.Code && x.MessageAlert == value.MessageAlert).FirstOrDefault() == null ? true : false;
             }
         }
         public bool Compare(T_RegisteredStudentSemester value)
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_RegisteredStudentSemesters.Where(x => x.Day == value.Day && x.RoomCode == value.RoomCode && x.SemEndDate == value.SemEndDate && x.Semester == value.Semester && x.SemStartDate == value.SemStartDate && x.StudentID == value.StudentID && x.SubjectCode == value.SubjectCode && x.TImeEnd == value.TImeEnd && x.TimeStart == value.TimeStart && x.YearClass == value.YearClass).FirstOrDefault() == null ? true : false;
             }
         }
         public List<T_RegisteredStudentSemester> GetRegisterStudent()
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_RegisteredStudentSemesters.ToList();
             }
@@ -126,7 +126,7 @@ namespace AttSysRFID.ViewModel
         public void Save(T_RegisteredStudentSemester value,ref string msg)
         {
             T_RegisteredStudentSemester valueupdate = new T_RegisteredStudentSemester();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 if (Compare(value))
                 {
@@ -148,7 +148,7 @@ namespace AttSysRFID.ViewModel
         public void Delete(long ID,ref string msg)
         {
             T_RegisteredStudentSemester valuedelete = new T_RegisteredStudentSemester();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 valuedelete = dc.T_RegisteredStudentSemesters.Where(x => x.ID == ID).FirstOrDefault();
                 dc.T_RegisteredStudentSemesters.DeleteOnSubmit(valuedelete);

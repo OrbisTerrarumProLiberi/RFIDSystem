@@ -11,7 +11,7 @@ namespace AttSysRFID.ViewModel
 
         public List<T_InstructorInformation> GetInstructor()
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_InstructorInformations.ToList();
             }
@@ -20,7 +20,7 @@ namespace AttSysRFID.ViewModel
         public void Save(T_InstructorInformation value,ref string msg)
         {
             //T_InstructorInformation valueupdate = new T_InstructorInformation();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 if (Compare(value))
                 {
@@ -58,7 +58,7 @@ namespace AttSysRFID.ViewModel
         public void Delete(T_InstructorInformation value,ref string msg)
         {
             //T_InstructorInformation valuedelete = new T_InstructorInformation();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 //valuedelete = dc.T_InstructorInformations.Where(x => x.ID == value.ID).FirstOrDefault();
                 var valuedelete = dc.T_InstructorInformations.FirstOrDefault(x => x.ID == value.ID);
@@ -71,7 +71,7 @@ namespace AttSysRFID.ViewModel
 
         public bool Compare(T_InstructorInformation value)
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_InstructorInformations
                     .Where(x => x.Address == value.Address &&

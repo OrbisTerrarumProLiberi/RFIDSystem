@@ -13,7 +13,7 @@ namespace AttSysRFID.ViewModel
         public static DateTime CurrDate()
         {
             
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.ExecuteQuery<DateTime>("SELECT GETDATE()").FirstOrDefault();
             }
@@ -21,7 +21,7 @@ namespace AttSysRFID.ViewModel
 
         public static void ONNotification()
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 OnMessage.SendingNotification = dc.T_OnNotifications.FirstOrDefault().OnMessage.Value;
             }
@@ -31,7 +31,7 @@ namespace AttSysRFID.ViewModel
         {
             //T_SystemUserLog value = new T_SystemUserLog();
             //T_SystemUserLog valueupdate = new T_SystemUserLog();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 if (TimeIN)
                 {
@@ -63,7 +63,7 @@ namespace AttSysRFID.ViewModel
         public bool Login(T_SystemUser Users,ref string msg)
         {
             //T_SystemUser _users = new T_SystemUser();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 //_users = dc.T_SystemUsers.Where(x => x.Active == true && x.EncryptedPassword == Users.EncryptedPassword && x.Username == Users.Username && x.Active==true).FirstOrDefault();
                 var _users = dc.T_SystemUsers.FirstOrDefault(x => x.Active.Value && x.EncryptedPassword == Users.EncryptedPassword && x.Username == Users.Username);
@@ -122,7 +122,7 @@ namespace AttSysRFID.ViewModel
 
         public List<T_AccessRight> GetAccessRight()
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 return dc.T_AccessRights.ToList();
             }

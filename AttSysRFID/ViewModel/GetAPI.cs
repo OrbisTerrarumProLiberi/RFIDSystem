@@ -60,7 +60,7 @@ namespace AttSysRFID.ViewModel
 
         public static void GetSendingDetails()
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 //var value=dc.T_NotificationSettings.Where(x => x.Active==true).FirstOrDefault();
                 var value=dc.T_NotificationSettings.FirstOrDefault(x => x.Active == true);
@@ -80,7 +80,7 @@ namespace AttSysRFID.ViewModel
 
         public List<T_NotificationSetting> GetAPIs()
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())            
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))            
             {
                 return dc.T_NotificationSettings.ToList();
             }
@@ -89,7 +89,7 @@ namespace AttSysRFID.ViewModel
         public void Delete(T_NotificationSetting value,ref string msg)
         {
             //T_NotificationSetting valuedelete = new T_NotificationSetting();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 //var valuedelete = dc.T_NotificationSettings.Where(x => x.ID == value.ID).FirstOrDefault();
                 var valuedelete = dc.T_NotificationSettings.FirstOrDefault(x => x.ID == value.ID);
@@ -111,7 +111,7 @@ namespace AttSysRFID.ViewModel
         public void Save(T_NotificationSetting value, ref string msg)
         {
             //T_NotificationSetting valueupdate = new T_NotificationSetting();
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 if (Compare(value))
                 {
@@ -168,7 +168,7 @@ namespace AttSysRFID.ViewModel
 
         public bool Compare(T_NotificationSetting value)
         {
-            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext())
+            using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))
             {
                 //return dc.T_NotificationSettings.Where(x => x.Active == value.Active && x.Page == value.Page && x.Site == value.Site && x.ParamMessageName == value.ParamMessageName && x.ParamMobileName == value.ParamMobileName).FirstOrDefault() == null ? true : false;
                 return dc.T_NotificationSettings
