@@ -278,9 +278,9 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.dgAccessRightPositionRecord);
             this.panel2.Controls.Add(this.label10);
@@ -380,7 +380,7 @@
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 20);
+            this.label10.Size = new System.Drawing.Size(93, 20);
             this.label10.TabIndex = 69;
             this.label10.Text = "Position List:";
             // 
@@ -391,7 +391,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(3, 3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 20);
+            this.label9.Size = new System.Drawing.Size(113, 20);
             this.label9.TabIndex = 68;
             this.label9.Text = "Position Details";
             // 
@@ -542,7 +542,7 @@
             this.cbRoomType.ForeColor = System.Drawing.Color.DimGray;
             this.cbRoomType.Location = new System.Drawing.Point(354, 36);
             this.cbRoomType.Name = "cbRoomType";
-            this.cbRoomType.Size = new System.Drawing.Size(84, 19);
+            this.cbRoomType.Size = new System.Drawing.Size(83, 19);
             this.cbRoomType.TabIndex = 22;
             this.cbRoomType.Tag = "12";
             this.cbRoomType.Text = "Room Type";
@@ -633,7 +633,7 @@
             this.cbMain_YearLevel.ForeColor = System.Drawing.Color.DimGray;
             this.cbMain_YearLevel.Location = new System.Drawing.Point(38, 86);
             this.cbMain_YearLevel.Name = "cbMain_YearLevel";
-            this.cbMain_YearLevel.Size = new System.Drawing.Size(75, 19);
+            this.cbMain_YearLevel.Size = new System.Drawing.Size(73, 19);
             this.cbMain_YearLevel.TabIndex = 15;
             this.cbMain_YearLevel.Tag = "12";
             this.cbMain_YearLevel.Text = "Year Level";
@@ -659,7 +659,7 @@
             this.cbMain_Position.ForeColor = System.Drawing.Color.DimGray;
             this.cbMain_Position.Location = new System.Drawing.Point(38, 36);
             this.cbMain_Position.Name = "cbMain_Position";
-            this.cbMain_Position.Size = new System.Drawing.Size(66, 19);
+            this.cbMain_Position.Size = new System.Drawing.Size(65, 19);
             this.cbMain_Position.TabIndex = 13;
             this.cbMain_Position.Tag = "12";
             this.cbMain_Position.Text = "Position";
@@ -686,7 +686,7 @@
             this.cbWin_Report.ForeColor = System.Drawing.Color.DimGray;
             this.cbWin_Report.Location = new System.Drawing.Point(29, 59);
             this.cbWin_Report.Name = "cbWin_Report";
-            this.cbWin_Report.Size = new System.Drawing.Size(61, 19);
+            this.cbWin_Report.Size = new System.Drawing.Size(62, 19);
             this.cbWin_Report.TabIndex = 14;
             this.cbWin_Report.Tag = "12";
             this.cbWin_Report.Text = "Report";
@@ -727,7 +727,7 @@
             this.cbYearClass.ForeColor = System.Drawing.Color.DimGray;
             this.cbYearClass.Location = new System.Drawing.Point(26, 84);
             this.cbYearClass.Name = "cbYearClass";
-            this.cbYearClass.Size = new System.Drawing.Size(76, 19);
+            this.cbYearClass.Size = new System.Drawing.Size(74, 19);
             this.cbYearClass.TabIndex = 14;
             this.cbYearClass.Tag = "12";
             this.cbYearClass.Text = "Year Class";

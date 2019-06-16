@@ -417,14 +417,14 @@
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column4.HeaderText = "Code";
+            this.Column4.HeaderText = "Course Code";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // ColStudentName
             // 
             this.ColStudentName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColStudentName.HeaderText = "Course";
+            this.ColStudentName.HeaderText = "Course Description";
             this.ColStudentName.Name = "ColStudentName";
             this.ColStudentName.ReadOnly = true;
             // 
@@ -434,6 +434,7 @@
             this.Column6.HeaderText = "Range level";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 92;
             // 
             // Column3
             // 
@@ -488,12 +489,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFromTo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColStudentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColStudentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label6;
@@ -501,5 +496,11 @@
         private System.Windows.Forms.TextBox txtCourse;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.CheckBox cbActive;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColStudentID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColStudentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
     }
 }

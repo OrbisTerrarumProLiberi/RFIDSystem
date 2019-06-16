@@ -98,6 +98,7 @@ namespace AttSysRFID.Views
         void btnAdd_Click(object sender, EventArgs e)
         {
             ObjEnable(true);
+            btnDelete = SystemProperties.BtnProperties(btnDelete, false, Imagename.Delete.ToString(), Imagename._delete.ToString());
             isAdd = true;
             SystemProperties.Cleared(this, true, true, true);
             MsgReturned = "";
@@ -119,6 +120,7 @@ namespace AttSysRFID.Views
                         txtEmployeeMiddleName.Text = value.MiddleName;
                         txtInstructorContactNo.Text = value.ContactNo;
                         btnDelete = SystemProperties.BtnProperties(btnDelete, true, Imagename.Delete.ToString(), Imagename._delete.ToString());
+                        btnEdit = SystemProperties.BtnProperties(btnEdit, true, Imagename.Edit.ToString(), Imagename._edit.ToString());
                         if (value.Gender.ToLower() == "male")
                         {
                             rbEmployeeMale.Checked = true;
@@ -230,7 +232,7 @@ namespace AttSysRFID.Views
         void ObjEnable(bool enable)
         {
             btnAdd = SystemProperties.BtnProperties(btnAdd, !enable, Imagename.Add.ToString(), Imagename._add.ToString());
-            btnEdit = SystemProperties.BtnProperties(btnEdit, !enable, Imagename.Edit.ToString(), Imagename._edit.ToString());
+            btnEdit = SystemProperties.BtnProperties(btnEdit, false, Imagename.Edit.ToString(), Imagename._edit.ToString());
             btnSave = SystemProperties.BtnProperties(btnSave, enable, Imagename.Save.ToString(), Imagename._save.ToString());
             btnDelete = SystemProperties.BtnProperties(btnDelete, enable, Imagename.Delete.ToString(), Imagename._delete.ToString());
             btnCancel = SystemProperties.BtnProperties(btnCancel, enable, Imagename.Cancel.ToString(), Imagename._cancel.ToString());
