@@ -455,7 +455,7 @@
             this.mtDisplay.BackColor = System.Drawing.Color.White;
             this.mtDisplay.ForeColor = System.Drawing.Color.Black;
             this.mtDisplay.Name = "mtDisplay";
-            this.mtDisplay.Size = new System.Drawing.Size(112, 22);
+            this.mtDisplay.Size = new System.Drawing.Size(180, 22);
             this.mtDisplay.Text = "Display";
             // 
             // mtReport
@@ -463,7 +463,7 @@
             this.mtReport.BackColor = System.Drawing.Color.White;
             this.mtReport.ForeColor = System.Drawing.Color.Black;
             this.mtReport.Name = "mtReport";
-            this.mtReport.Size = new System.Drawing.Size(112, 22);
+            this.mtReport.Size = new System.Drawing.Size(180, 22);
             this.mtReport.Text = "Report";
             this.mtReport.Visible = false;
             // 

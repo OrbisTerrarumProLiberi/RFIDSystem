@@ -15,6 +15,7 @@ namespace AttSysRFID.ViewModel
                 return dc.T_StudentInformations.ToList();
             }
         }
+
         public bool Compare(T_StudentInformation value)
         {
             using (AttMonSysRFIDDataContext dc = new AttMonSysRFIDDataContext(SystemConnection.ConnectionString))

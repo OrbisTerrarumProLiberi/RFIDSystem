@@ -58,6 +58,7 @@ namespace AttSysRFID.Views.Student
             btnDelete.Click += new EventHandler(btnDelete_Click);
             btnSearch.Click += new EventHandler(btnSearch_Click);
             dgStudentRecord.CellClick += new DataGridViewCellEventHandler(dgStudentRecord_CellClick);
+            dgStudentRecord.RowsAdded += DgStudentRecord_RowsAdded;
 
             cmbApplication.KeyDown += new KeyEventHandler(cmbApplication_KeyDown);
             cmbFatherCivilStatus.KeyDown += new KeyEventHandler(cmbFatherCivilStatus_KeyDown);
@@ -81,6 +82,11 @@ namespace AttSysRFID.Views.Student
             picStudent.Click += new EventHandler(picStudent_Click);
         }
 
+        private void DgStudentRecord_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            dgStudentRecord[Column1.Index, e.RowIndex].Value = dgStudentRecord.RowCount;
+        }
+
         void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter && !string.IsNullOrWhiteSpace(txtSearch.Text))
@@ -89,6 +95,7 @@ namespace AttSysRFID.Views.Student
             //    SystemProperties.ShowMessage.MessageError(SystemProperties.MessageNotification.CheckInput + "for search box", "Student registration");
             
         }
+
         void picStudent_Click(object sender, EventArgs e)
         {
             openFile.Filter = "Image File(*.bmp;*.jpeg;*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
@@ -99,6 +106,7 @@ namespace AttSysRFID.Views.Student
                 StudentFileImage = openFile.FileName;
             }
         }        
+
         void btnSearch_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtSearch.Text))
@@ -112,6 +120,7 @@ namespace AttSysRFID.Views.Student
             if (string.IsNullOrWhiteSpace(txtSearch.Text))
                 LoadStudentInfo();           
         }
+
         void txtStudentRFIDNo_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtStudentRFIDNo.Text))
@@ -120,50 +129,62 @@ namespace AttSysRFID.Views.Student
                 AutoScanTimer.Start();                
             }
         }
+
         void cmbYearLevel_KeyPress(object sender, KeyPressEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyPress(e);
         }
+
         void cmbStudentCourse_KeyPress(object sender, KeyPressEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyPress(e);
         }
+
         void cmbMotherCivilStatus_KeyPress(object sender, KeyPressEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyPress(e);
         }
+
         void cmbFatherCivilStatus_KeyPress(object sender, KeyPressEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyPress(e);
         }
+
         void cmbApplication_KeyPress(object sender, KeyPressEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyPress(e);
         }
+
         void cmbYearLevel_KeyDown(object sender, KeyEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyDown(e);
         }
+
         void cmbStudentCourse_KeyDown(object sender, KeyEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyDown(e);
         }
+
         void cmbMotherCivilStatus_KeyDown(object sender, KeyEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyDown(e);
         }
+
         void cmbFatherCivilStatus_KeyDown(object sender, KeyEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyDown(e);
         }
+
         void cmbApplication_KeyDown(object sender, KeyEventArgs e)
         {
             SystemProperties.CmbKeyEventCtrl.KeyDown(e);
         }
+
         void dgStudentRecord_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LoadSelectedOne(Convert.ToInt64(dgStudentRecord.SelectedRows[0].Cells[0].Value.ToString()));
         }
+
         void LoadSelectedOne(long ID)
         {
             using (Students std = new Students())
@@ -238,6 +259,7 @@ namespace AttSysRFID.Views.Student
                 }
             }
         }
+
         void LoadApplication()
         {
             cmbApplication.Items.Clear();
@@ -249,6 +271,7 @@ namespace AttSysRFID.Views.Student
                 });
             }
         }
+
         void LoadCourse()
         {
             cmbStudentCourse.Items.Clear();
@@ -260,6 +283,7 @@ namespace AttSysRFID.Views.Student
                 });
             }
         }
+
         void LoadYearLevel()
         {
             cmbYearLevel.Items.Clear();
@@ -271,6 +295,7 @@ namespace AttSysRFID.Views.Student
                 });
             }
         }
+
         void LoadCivilStatus()
         {
             cmbFatherCivilStatus.Items.Clear();
@@ -284,19 +309,27 @@ namespace AttSysRFID.Views.Student
                 });
             }
         }
+
         void LoadStudentInfo(string Search)
         {
             dgStudentRecord.Rows.Clear();
-            int i = 1;
+            //int i = 1;
             using (Students _std = new Students())
             {
-                var value=  _std.GetStudentInfo().Where(y=> y.StudentID== Search || y.RFIDNo==Search || y.LastName==Search || y.FirstName==Search).OrderBy(o=> o.LastName).ToList();
+                var value = _std.GetStudentInfo()
+                            .Where(y=> 
+                                y.StudentID.ToLower().Contains(Search.ToLower()) || 
+                                y.RFIDNo.ToLower().Contains(Search.ToLower()) || 
+                                y.LastName.ToLower().Contains(Search.ToLower()) || 
+                                y.FirstName.ToLower().Contains(Search.ToLower()))
+                            .ToList();
+                //var value=  _std.GetStudentInfo().Where(y=> y.StudentID== Search || y.RFIDNo==Search || y.LastName==Search || y.FirstName==Search).OrderBy(o=> o.LastName).ToList();
                 value.ForEach(x =>
                 {
-                    dgStudentRecord.Rows.Add(x.ID, i, x.StudentID, string.Format("{0}, {1} {2}", x.LastName, x.FirstName, x.MiddleName));
-                    i++;
+                    dgStudentRecord.Rows.Add(x.ID, 0, x.StudentID, string.Format("{0}, {1} {2}", x.LastName, x.FirstName, x.MiddleName));
+                    //i++;
                 });
-                if (value.Count == 1)
+                if (value.Count >= 1)
                     LoadSelectedOne(value.FirstOrDefault().ID);
 
                 else
@@ -310,19 +343,20 @@ namespace AttSysRFID.Views.Student
             }
 
             ObjEnable(false);
-            dgStudentRecord.Enabled = false;
+            //dgStudentRecord.Enabled = false;
             txtSearch.ReadOnly = false;
         }
+
         void LoadStudentInfo()
         {
             dgStudentRecord.Rows.Clear();
-            int i = 1;
+            //int i = 1;
             using (Students _std = new Students())
             {
                 _std.GetStudentInfo().ForEach(x =>
                 {
-                    dgStudentRecord.Rows.Add(x.ID,i,x.StudentID,string.Format("{0}, {1} {2}",x.LastName,x.FirstName,x.MiddleName));
-                    i++;
+                    dgStudentRecord.Rows.Add(x.ID,0,x.StudentID,string.Format("{0}, {1} {2}",x.LastName,x.FirstName,x.MiddleName));
+                    //i++;
                 });
             }
 
@@ -331,6 +365,7 @@ namespace AttSysRFID.Views.Student
             txtSearch.ReadOnly = false;
             dgStudentRecord.Enabled = true;
         }
+
         void Save()
         {
             if (SystemProperties.ShowMessage.MessageQuestion(SystemProperties.MessageNotification.YouWantToSave, "Student registration") == DialogResult.Yes)
@@ -364,6 +399,7 @@ namespace AttSysRFID.Views.Student
             }
             
         }
+
         private bool CheckEmpty()
         {
             if ((!string.IsNullOrWhiteSpace(txtFatherLastName.Text) && !string.IsNullOrWhiteSpace(txtFatherFirstName.Text) || (!string.IsNullOrWhiteSpace(txtMotherFirstName.Text) && !string.IsNullOrWhiteSpace(txtMotherLastName.Text))) && !string.IsNullOrWhiteSpace(txtStudentID.Text) && !string.IsNullOrWhiteSpace(txtStudentLastName.Text) && !string.IsNullOrWhiteSpace(txtStudentFirstName.Text) && !string.IsNullOrWhiteSpace(txtStudentRFIDNo.Text) && (!string.IsNullOrWhiteSpace(txtMotherContactNo.Text) || !string.IsNullOrWhiteSpace(txtFatherContactNo.Text)))
@@ -371,6 +407,7 @@ namespace AttSysRFID.Views.Student
             else
                 return false;
         }
+
         void Delete()
         {
             if (SystemProperties.ShowMessage.MessageQuestion(SystemProperties.MessageNotification.YouWantToDelete, "Student registration") == DialogResult.Yes)
@@ -396,6 +433,7 @@ namespace AttSysRFID.Views.Student
                 }
             }
         }
+
         void DeleteImage()
         {
             string pathDirection = "";
@@ -407,6 +445,7 @@ namespace AttSysRFID.Views.Student
             File.Delete(string.Format("{0}{1}", pathDirection, ImageName));
             
         }
+
         void SaveImage(bool IsSave)
         {
             picStudent.Image = null;
@@ -439,6 +478,7 @@ namespace AttSysRFID.Views.Student
 
             }
         }
+
         void ObjEnable(bool enable)
         {
             btnAdd = SystemProperties.BtnProperties(btnAdd, !enable, Imagename.Add.ToString(), Imagename._add.ToString());
@@ -448,6 +488,7 @@ namespace AttSysRFID.Views.Student
             btnCancel = SystemProperties.BtnProperties(btnCancel, enable, Imagename.Cancel.ToString(), Imagename._cancel.ToString());
             btnSearch = SystemProperties.BtnProperties(btnSearch, true, Imagename.Search.ToString(), Imagename.Search.ToString());
         }
+
         private T_StudentInformation SetupStudentInfo(bool IsDelete)
         {
             T_StudentInformation value = new T_StudentInformation();
@@ -479,6 +520,7 @@ namespace AttSysRFID.Views.Student
             value.YearLevel = cmbYearLevel.Text;
             return value;
         }
+
         private T_ParenstInfo SetupParentInfo(bool IsDelete)
         {
             T_ParenstInfo value = new T_ParenstInfo();
@@ -509,6 +551,7 @@ namespace AttSysRFID.Views.Student
                 value.ID = ParentsID;
             return value;
         }
+
         void ComSerial_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             try
@@ -521,6 +564,7 @@ namespace AttSysRFID.Views.Student
                
             }
         }
+
         private void _dis(object sender, EventArgs e)
         {
 
@@ -537,25 +581,29 @@ namespace AttSysRFID.Views.Student
             //txtStudentRFIDNo.Text = txtStudentRFIDNo.Text.Replace(" ","").Remove(8);
             
         }
+
         void AutoScanTimer_Tick(object sender, EventArgs e)
         {
             if(string.IsNullOrWhiteSpace(txtStudentRFIDNo.Text))
                 AutoScan();
         
         }
+
         void AutoScan()
         {
             try
             {
-
                 ComSerial.ReadTimeout = 100;
-                ComPortList = SerialPort.GetPortNames();
-                foreach (string port in ComPortList)
-                {
-                    ComSerial.PortName = port.ToString();
-                }
-                
-                Comport = ComSerial.PortName;
+                //ComPortList = SerialPort.GetPortNames();
+
+                //foreach (string port in ComPortList)
+                //{
+                //    ComSerial.PortName = port.ToString();
+                //}
+
+                ComSerial.PortName = SerialPort.GetPortNames().LastOrDefault();
+
+                //Comport = ComSerial.PortName;
                 
                 //GetRoomAssignment(ComSerial.PortName);
                 ComSerial.BaudRate = 9600;
@@ -573,13 +621,16 @@ namespace AttSysRFID.Views.Student
             }
         
         }
+
         private bool CheckRFIDNo()
         {
             using (Students std = new Students())
             {
-                return std.GetStudentInfo().Where(x=> x.RFIDNo == txtStudentRFIDNo.Text).FirstOrDefault()==null?true:false;
+                //return std.GetStudentInfo().Where(x=> x.RFIDNo == txtStudentRFIDNo.Text).FirstOrDefault()==null?true:false;
+                return std.GetStudentInfo().Where(x=> x.RFIDNo == txtStudentRFIDNo.Text).Any();
             }
         }
+
         void btnDelete_Click(object sender, EventArgs e)
         {
             ObjEnable(false);
@@ -591,11 +642,13 @@ namespace AttSysRFID.Views.Student
             txtSearch.ReadOnly = false; 
            
         }
+
         void btnSave_Click(object sender, EventArgs e)
         {
             Save();            
             MsgReturned = "";
         }
+
         void btnCancel_Click(object sender, EventArgs e)
         {
             LoadStudentInfo();
@@ -607,6 +660,7 @@ namespace AttSysRFID.Views.Student
            
             txtSearch.ReadOnly = false;
         }
+
         void btnEdit_Click(object sender, EventArgs e)
         {
             ObjEnable(true);
@@ -618,6 +672,7 @@ namespace AttSysRFID.Views.Student
             AutoScanTimer.Start();
             txtSearch.ReadOnly = false; 
         }
+
         void btnAdd_Click(object sender, EventArgs e)
         {
             ObjEnable(true);
@@ -629,8 +684,10 @@ namespace AttSysRFID.Views.Student
             AutoScanTimer.Start();
             txtSearch.ReadOnly = false; 
         }
+
         private void frmStudent_Load(object sender, EventArgs e)
         {
+
         }
 
        

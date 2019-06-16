@@ -213,6 +213,7 @@ namespace AttSysRFID.Views.Main
                 }
             }
         }
+
         public void Login()
         {
             T_SystemUser user = new T_SystemUser();
@@ -330,24 +331,29 @@ namespace AttSysRFID.Views.Main
                 mtYearClass.Enabled = enable;
             }
         }
+
         void txtPassword_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter && !string.IsNullOrWhiteSpace(txtUsername.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
                 Login();
         }
+
         void txtPassword_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtPassword.Text))
                 EncryptedPassword = UserDetail.encrypt(txtPassword.Text);
-        }              
+        } 
+        
         void mtLogin_Click(object sender, EventArgs e)
         {
             pnlLogin.Show();
-        }       
+        }   
+        
         void mtExit_Click(object sender, EventArgs e)
         {
             Exit();
         }
+
         void Exit()
         {
 
@@ -373,25 +379,49 @@ namespace AttSysRFID.Views.Main
             {
                 Application.Exit();
             }
-               
-            
         }
+
         void btnExit_Click(object sender, EventArgs e)
         {
             pnlLogin.Hide();
         }
+
         void btnLogin_Click(object sender, EventArgs e)
         {
             Login();
         }
+
         void mtStudent_Click(object sender, EventArgs e)
         {
             OpenForm(new frmStudent(), true);
         }
+
         void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Exit();
+            if (!string.IsNullOrWhiteSpace(UserInfo.UserID))
+            {
+                e.Cancel = !(SystemProperties.ShowMessage.MessageQuestion("Do you want to logout your account and exit application?", "Login") == DialogResult.Yes);
+                if (!e.Cancel)
+                {
+                    using (UserDetail UD = new UserDetail())
+                    {
+                        UD.SaveLog(false);
+                        foreach (Form frm in this.MdiChildren)
+                        {
+                            if (!frm.Focused)
+                            {
+                                frm.Close();
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
+
         void OpenForm(Form ToOpenForm, bool Maximixed)
         {
 
@@ -399,7 +429,7 @@ namespace AttSysRFID.Views.Main
             if (!_contain)
             {
                 ToOpenForm.MdiParent = this;
-                ToOpenForm.MdiParent.WindowState = FormWindowState.Maximized;
+                ToOpenForm.WindowState = FormWindowState.Maximized;
                 ToOpenForm.Show();
             }
             else
@@ -415,6 +445,7 @@ namespace AttSysRFID.Views.Main
 
             
         }
+
         async void timer1_Tick(object sender, EventArgs e)
         {
             tsDateTime.Text = UserDetail.CurrDate().ToString("MMM. dd, yyyy |  HH:mm:ss tt");

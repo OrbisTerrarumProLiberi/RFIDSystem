@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlStudentRegistration = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbActiveStd = new System.Windows.Forms.CheckBox();
@@ -304,7 +304,7 @@
             this.label16.ForeColor = System.Drawing.Color.DimGray;
             this.label16.Location = new System.Drawing.Point(306, 156);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 17);
+            this.label16.Size = new System.Drawing.Size(71, 17);
             this.label16.TabIndex = 46;
             this.label16.Text = "Year Level:";
             // 
@@ -1193,14 +1193,14 @@
             this.dgStudentRecord.AllowUserToAddRows = false;
             this.dgStudentRecord.AllowUserToDeleteRows = false;
             this.dgStudentRecord.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgStudentRecord.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgStudentRecord.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgStudentRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgStudentRecord.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColStudentID,
@@ -1227,8 +1227,8 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column1.HeaderText = "No";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
